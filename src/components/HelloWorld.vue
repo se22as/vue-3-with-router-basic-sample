@@ -1,6 +1,7 @@
 <template>
   <div class="hello">
     <h1>{{ msg }}</h1>
+    <button @click="onButtonClick($event)">Click here</button>
   </div>
 </template>
 
@@ -9,6 +10,13 @@ export default {
   name: 'HelloWorld',
   props: {
     msg: String,
+  },
+  methods: {
+    onButtonClick() {
+      console.log('Button has been clicked upon');
+      // eslint-disable-next-line no-alert
+      alert('Button has been clicked upon');
+    },
   },
 };
 </script>
