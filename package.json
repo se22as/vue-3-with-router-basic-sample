@@ -5,10 +5,18 @@
   "scripts": {
     "startcsr": "vue-cli-service serve",
     "buildcsr": "vue-cli-service build",
+    "build": "rm -rf ./dist && npm run build:client && npm run build:server",
+    "build:client": "vue-cli-service build --dest dist/client",
+    "build:server": "cross-env SSR=1 vue-cli-service build --dest dist/server",
+    "start": "node server.js",
     "lint": "vue-cli-service lint"
   },
   "dependencies": {
+    "@vue/server-renderer": "^3.0.2",
     "core-js": "^3.6.5",
+    "cross-env": "^7.0.2",
+    "express": "^4.17.1",
+    "serialize-javascript": "^5.0.1",
     "vue": "^3.0.0",
     "vue-router": "^4.0.0-0"
   },
@@ -22,6 +30,8 @@
     "babel-eslint": "^10.1.0",
     "eslint": "^6.7.2",
     "eslint-plugin-import": "^2.20.2",
-    "eslint-plugin-vue": "^7.0.0-0"
+    "eslint-plugin-vue": "^7.0.0-0",
+    "webpack-manifest-plugin": "^2.2.0",
+    "webpack-node-externals": "^2.5.2"
   }
 }
