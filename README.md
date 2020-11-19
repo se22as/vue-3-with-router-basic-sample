@@ -2,6 +2,8 @@
 This example app takes the application from https://github.com/moduslabs/vue3-example-ssr which has 
 router and a non singleton vuex and simplifies it to just have a router.
 
+Added the use of Vuex, followed the instructions on https://blog.logrocket.com/using-vuex-4-with-vue-3/
+and information on https://blog.logrocket.com/refactoring-your-vue-2-apps-to-vue-3/
 
 ## Project setup
 ```
