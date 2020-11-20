@@ -1,6 +1,5 @@
 const ManifestPlugin = require('webpack-manifest-plugin');
 const nodeExternals = require('webpack-node-externals');
-// const webpack = require('webpack');
 
 module.exports = {
   devServer: {
@@ -9,9 +8,6 @@ module.exports = {
       errors: false,
     },
   },
-  // configureWebpack: {
-  //   resolve: { mainFields: ['main', 'module'] }
-  // },
   chainWebpack: (webpackConfig) => {
     webpackConfig.module.rule('vue').uses.delete('cache-loader');
     webpackConfig.module.rule('js').uses.delete('cache-loader');
@@ -42,12 +38,6 @@ module.exports = {
     webpackConfig.plugins.delete('prefetch');
     webpackConfig.plugins.delete('progress');
     webpackConfig.plugins.delete('friendly-errors');
-
-    // webpackConfig.plugin('limit').use(
-    //       new webpack.optimize.LimitChunkCountPlugin({
-    //         maxChunks: 1
-    //       })
-    // )
 
     // console.log(webpackConfig.toConfig())
   },

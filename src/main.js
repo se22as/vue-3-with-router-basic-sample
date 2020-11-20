@@ -1,20 +1,14 @@
-// import { createApp } from 'vue';
-// import App from './App.vue';
-// import router from './router';
-
-// createApp(App).use(router).mount('#app');
-
 import buildApp from './app';
 
-const { app, router } = buildApp();
+const { app, router, store } = buildApp();
+
+// eslint-disable-next-line no-underscore-dangle
+const storeInitialState = window.INITIAL_DATA;
+if (storeInitialState) {
+  store.replaceState(storeInitialState);
+}
 
 router.isReady()
   .then(() => {
     app.mount('#app', true);
   });
-
-// (async (r, a) => {
-//   await r.isReady();
-
-//   a.mount('#app', true);
-// })(router, app);

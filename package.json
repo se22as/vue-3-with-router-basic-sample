@@ -16,9 +16,11 @@
     "core-js": "^3.6.5",
     "cross-env": "^7.0.2",
     "express": "^4.17.1",
+    "node-fetch": "^2.6.1",
     "serialize-javascript": "^5.0.1",
     "vue": "^3.0.0",
-    "vue-router": "^4.0.0-0"
+    "vue-router": "^4.0.0-0",
+    "vuex": "^4.0.0-rc.1"
   },
   "devDependencies": {
     "@vue/cli-plugin-babel": "~4.5.0",

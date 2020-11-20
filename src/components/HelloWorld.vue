@@ -13,6 +13,7 @@ export default {
   },
   methods: {
     onButtonClick() {
+      // eslint-disable-next-line no-console
       console.log('Button has been clicked upon');
       // eslint-disable-next-line no-alert
       alert('Button has been clicked upon');
